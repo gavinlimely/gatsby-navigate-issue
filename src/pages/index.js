@@ -23,8 +23,10 @@ class IndexPage extends React.Component {
   }
 
   outputRandom() {
-    if (this.props.location.state) {
-      return <p>{this.props.location.state.random}</p>
+    if (this.props.location.state && this.props.location.state.random) {
+      return <p>Random number is: {this.props.location.state.random}</p>
+    } else {
+      return <p>No random number in state.</p>
     }
   }
 
